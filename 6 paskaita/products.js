@@ -14,18 +14,17 @@ else {
     `;
 }
 
+function redirectToSingleProduct(productIndex) {
+    localStorage.setItem('singleProduct', JSON.stringify(products[productIndex]))
+    window.location.href = './single-product.html'
+}
+
 function deleteProduct(index) {
     products.splice(index);
     localStorage.setItem('products', JSON.stringify(products));
     products.forEach(renderProduct);
 }
 
-
-{
-    function redirectToSingleProduct(productIndex) {
-        localStorage.setItem('singleProduct', JSON.stringify(products[productIndex]))
-        window.location.href = './single-product.html'
-}
 function renderProduct(product,index) {
 
     productContainer.innerHTML += `
@@ -49,9 +48,9 @@ function renderProduct(product,index) {
                             </small>
                         </p>
                         <div>
-                        <button onclick="deleteProduct(${index})" class="btn btn-primary">Delete</button>
-                            <button onclick="deleteProduct(${index})" class="btn btn-success">Delete</button>
-                            <button onclick="editProduct(${index})" class="btn btn-danger">Edit</button>
+                            <button onclick="redirectToSingleProduct(${index})" class="btn btn-primary">View</button>
+                            <button onclick="editProduct(${index})" class="btn btn-success">Edit</button>
+                            <button onclick="deleteProduct(${index})" class="btn btn-danger">Delete</button>
                         </div>
                     </div>
                 </div>

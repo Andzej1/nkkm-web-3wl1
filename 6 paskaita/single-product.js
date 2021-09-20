@@ -6,8 +6,6 @@ if (!localStorage.getItem('singleProduct')) {
 } else {
     product = JSON.parse(localStorage.getItem('singleProduct'));
     localStorage.removeItem('singleProduct');
-
-
 }
 
 productContainer.innerHTML = `
@@ -28,3 +26,5 @@ productContainer.innerHTML = `
     </div>
 </div>
 `
+
+
