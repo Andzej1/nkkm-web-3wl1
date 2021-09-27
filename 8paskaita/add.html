@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/styles/add.css">
+    <title>E-commerce</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar"></nav>
+
+<section class="add-product">
+    <div class="add-product-container">
+        <div class="mb-3">
+            <label for="productName" class="form-label">Name:</label>
+            <input id="productName" class="form-control" type="text">
+        </div>
+        <div class="mb-3">
+            <label for="productQuantity" class="form-label">Quantity:</label>
+            <input class="form-control" id="productQuantity" type="number">
+        </div>
+        <div class="mb-3">
+            <label for="productCategory" class="form-label">Category:</label>
+            <select id="productCategory" class="form-select">
+                <option selected>Select category</option>
+                <option value='one'>One</option>
+                <option value='two'>Two</option>
+                <option value='three'>Three</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice" class="form-label">Price:</label>
+            <input id="productPrice" class="form-control" type="number">
+        </div>
+        <div class="mb-3">
+            <label for="productImage" class="form-label">Image:</label>
+            <input id="productImage" class="form-control" type="text">
+        </div>
+        <div class="mb-3">
+            <label for="productDescription" class="form-label">Description:</label>
+            <textarea id="productDescription" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="addProduct()">Add</button>
+    </div>
+</section>
+
+<script src="./assets/templates/navbar.js"></script>
+<script src="./add.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

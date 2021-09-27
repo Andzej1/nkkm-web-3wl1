@@ -1,0 +1,11 @@
+.login {
+    width: 100%;
+    min-height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    padding: 60px 0;
+}
